@@ -8,13 +8,13 @@ const init = async () => {
         host:'localhost'
     });
 
-    // server.route({
-    //     method: 'GET',
-    //     path:'/',
-    //     handler:(Request, h) => {
-    //         return 'server successfully running'
-    //     }
-    // })
+    server.route({
+        method: 'GET',
+        path:'/',
+        handler:(Request, h) => {
+            return 'server successfully running'
+        }
+    })
 
     server.route(routes);
 

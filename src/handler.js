@@ -1,4 +1,4 @@
-const { nanoid } = require("nanoid");
+const nanoid  = require('nanoid');
 const books = require('./books');
 
 const addBoookHandler = (request, h) => {
@@ -33,11 +33,15 @@ if (isSuccess) {
 
     const response = h.response({
       status : 'fail',
-      message:'buku gagak ditambahkan'
+      message:'buku gagal ditambahkan'
     })
     response.code(500)
     return response;
 
 }
+
+const getAllBooksHandler = () => ({
+    
+})
 
 module.exports = {addBoookHandler}
